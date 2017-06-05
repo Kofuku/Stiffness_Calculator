@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>865</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Stiffness Calculator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="DATA">
+       <attribute name="title">
+        <string>DATA</string>
+       </attribute>
+       <widget class="QPushButton" name="calculateButton">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>510</y>
+          <width>141</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Calculate</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>281</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="9" column="3">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>GPa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="3">
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>GPa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>Cracking moment</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="1">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>Mcr</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="3">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>kNm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="2">
+          <widget class="QLineEdit" name="crackingValue"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_01">
+           <property name="text">
+            <string>Length</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>L</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Width</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Height</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="4">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Reinforcement data:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Placement</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>h</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Modulus of elasticity - concrete</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0" colspan="4">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Material data:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>Modulus of elasticity - steel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>b</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>fi</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>as</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>Ec</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>Es</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLabel" name="label_21">
+           <property name="text">
+            <string>m</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_20">
+           <property name="text">
+            <string>m</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="heightValue"/>
+         </item>
+         <item row="9" column="2">
+          <widget class="QLineEdit" name="moeConcreteValue"/>
+         </item>
+         <item row="7" column="2">
+          <widget class="QLineEdit" name="steelPlacementValue"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="widthValue"/>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLineEdit" name="diameterValue"/>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_22">
+           <property name="text">
+            <string>m</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLineEdit" name="quantityValue"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="lengthValue"/>
+         </item>
+         <item row="10" column="2">
+          <widget class="QLineEdit" name="moeSteelValue"/>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>n</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QLabel" name="label_23">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="3">
+          <widget class="QLabel" name="label_25">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="4">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Geometrical data:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>312</y>
+          <width>281</width>
+          <height>203</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="pointedForceLocation"/>
+         </item>
+         <item row="7" column="2">
+          <widget class="QLineEdit" name="pointedMomentLocation"/>
+         </item>
+         <item row="2" column="3">
+          <widget class="QPushButton" name="pointedForceButton">
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="3">
+          <widget class="QLabel" name="label_47">
+           <property name="text">
+            <string>m</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QLabel" name="label_45">
+           <property name="text">
+            <string>m</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QPushButton" name="pointedMomentButton">
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="uniformLoadValue"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_34">
+           <property name="text">
+            <string>Location</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLabel" name="label_41">
+           <property name="text">
+            <string>M</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_36">
+           <property name="text">
+            <string>Value</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_37">
+           <property name="text">
+            <string>Location</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_38">
+           <property name="text">
+            <string>q</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="pointedForceValue"/>
+         </item>
+         <item row="5" column="0" colspan="3">
+          <widget class="QLabel" name="label_35">
+           <property name="text">
+            <string>Pointed moment:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLineEdit" name="pointedMomentValue"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>Value</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="3">
+          <widget class="QLabel" name="label_32">
+           <property name="text">
+            <string>Pointed force:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLabel" name="label_42">
+           <property name="text">
+            <string>xM</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_43">
+           <property name="text">
+            <string>kN/m</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="label_39">
+           <property name="text">
+            <string>P</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_44">
+           <property name="text">
+            <string>kN</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_33">
+           <property name="text">
+            <string>Value</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLabel" name="label_40">
+           <property name="text">
+            <string>x&lt;sub&gt;P&lt;/sub&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QLabel" name="label_46">
+           <property name="text">
+            <string>kNm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="4">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Uniform load:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QTableWidget" name="pointedForceTable">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>30</y>
+          <width>211</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Force value</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Location x</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="pointedMomentTable">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>260</y>
+          <width>211</width>
+          <height>192</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Moment value</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Location x</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="clearForceTableButton">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>220</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="clearMomentsTableButton">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>450</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="MOMENTS">
+       <attribute name="title">
+        <string>MOMENTS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="resultMomentsTable">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <column>
+           <property name="text">
+            <string>Location</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Moment value</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="momentsGraph" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayoutMoments"/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="STIFFNESS">
+       <attribute name="title">
+        <string>STIFFNESS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="resultStiffnessTable">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <column>
+           <property name="text">
+            <string>Location</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Stiffness value</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="stiffnessGraph" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayoutStiffness"/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
